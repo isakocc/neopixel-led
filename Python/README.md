@@ -4,4 +4,26 @@ The file fade-sigterm-ws281x.py uses rpi-ws281x library and make led fade in and
 
 The file fade-color-sigterm-ws281x.py uses rpi-ws281x library and make led fade in and out in a defined color using strip.setBrightness function to change brightness by changing 32 bit brightness information in the function (from strip.setBrightness(255) to strip.setBrightness(25)  and back) with a range() function (that is strip.setBrightness(j) where j is in a range of 25 to 255). To change to the desired color you need to set it in lines 68 and 70 in a GRB format. It clears all leds when finishing script with ctrl-c (for that you need to start the script using -c argument: fade-color-sigterm-ws281x.py -c) or when system shuts down (for that you need to add script to start at boot with crontab -e: @reboot sudo python /"location of file"/fade-color-sigterm-ws281x.py & ).
 
-As raspberry pi 5 is not supporting ws281x library anymore I would make and implementation using Adafrui-Neopixel library soon. 
+As raspberry pi 5 is not supporting either ws281x and Adafruit-Neopixel library anymore it would have to be implemented with Pi5Neo library. I reproduce one approach in the examples of the library (can't test because I dont have a rpi5 here):
+
+#Breathing Effect for a Single LED (LED slowly fades in and out)
+import time
+from pi5neo import Pi5Neo
+
+def breathing_led(neo, led_index, color, steps=50, delay=0.05):
+    for i in range(steps):
+        intensity = int(255 * (i / steps))  # Gradually increase intensity
+        neo.set_led_color(led_index, *(intensity if c > 0 else 0 for c in color))  # Adjust brightness
+        neo.update_strip()
+        time.sleep(delay)
+    for i in range(steps, 0, -1):
+        intensity = int(255 * (i / steps))  # Gradually decrease intensity
+        neo.set_led_color(led_index, *(intensity if c > 0 else 0 for c in color))
+        neo.update_strip()
+        time.sleep(delay)
+
+# Initialize Pi5Neo with 10 LEDs
+neo = Pi5Neo('/dev/spidev0.0', 10, 800)
+
+# Breathing effect on 1st LED with red color
+breathing_led(neo, 0, (255, 0, 0))
