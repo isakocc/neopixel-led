@@ -6,4 +6,4 @@ The file fade-color-sigterm-ws281x.py uses rpi-ws281x library and make led fade 
 
 I used the "sigterm" approach from https://dev.to/khenhey/light-up-leds-when-you-start-your-raspberry-pi-and-clear-them-on-shutdown-542
 
-As raspberry pi 5 is not supporting either ws281x and Adafruit-Neopixel library anymore it would have to be implemented with Pi5Neo library (see https://pypi.org/project/Pi5Neo/). I reproduce one approach in the examples of the library (can't test because I dont have a rpi5 here): fade-Pi5Neo.py
+As raspberry pi 5 is not supporting either ws281x and Adafruit-Neopixel library in the moment, it would have to be implemented with Pi5Neo library (see https://pypi.org/project/Pi5Neo/). I reproduce one approach in the examples of the library (can't test because I dont have a rpi5 here): fade-Pi5Neo.py
