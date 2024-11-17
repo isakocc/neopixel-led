@@ -22,7 +22,7 @@ mv color-grb.py color.py
 ```
 
 ### Raspberry Pi 5
-As Raspberry Pi 5 is not supporting either ws281x and Adafruit-Neopixel library at the moment, it would have to be implemented with Pi5Neo library (see https://pypi.org/project/Pi5Neo/). I reproduce one approach in the examples of the library (can't test because I dont have a rpi5 here): fade-Pi5Neo.py
+As Raspberry Pi 5 is not supporting either ws281x and Adafruit-Neopixel library at the moment, it would have to be implemented with Pi5Neo library (see https://pypi.org/project/Pi5Neo/). I reproduce one approach in the examples of the library (not tested): fade-Pi5Neo.py
 
 [^1]:To resolve that I used this discussion: https://forum.arduino.cc/t/adafruit-neopixel-code-for-simple-brightness-fade/418170/7. Also see this implementation in the Arduino section.
 [^2]: I used the "sigterm" approach from https://dev.to/khenhey/light-up-leds-when-you-start-your-raspberry-pi-and-clear-them-on-shutdown-542
