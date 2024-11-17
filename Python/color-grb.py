@@ -26,40 +26,54 @@ Implementation Notes
 # Makes colorwheel() available.
 from rainbowio import colorwheel  # pylint: disable=unused-import
 
-RED = (255, 0, 0)
+#RED = (255, 0, 0)
+RED = (0, 255, 0)
 """Red."""
-YELLOW = (255, 150, 0)
+#YELLOW = (255, 150, 0)
+YELLOW = (150, 255, 0)
 """Yellow."""
-ORANGE = (255, 40, 0)
+#ORANGE = (255, 40, 0)
+ORANGE = (80, 255, 0)
 """Orange."""
-GREEN = (0, 255, 0)
+#GREEN = (0, 255, 0)
+GREEN = (255, 0, 0)
 """Green."""
-TEAL = (0, 255, 120)
+#TEAL = (0, 255, 120)
+TEAL = (255, 0, 120)
 """Teal."""
-CYAN = (0, 255, 255)
+#CYAN = (0, 255, 255)
+CYAN = (255, 0, 255)
 """Cyan."""
 BLUE = (0, 0, 255)
 """Blue."""
-PURPLE = (180, 0, 255)
+#PURPLE = (180, 0, 255)
+PURPLE = (0, 180, 255)
 """Purple."""
-MAGENTA = (255, 0, 20)
+#MAGENTA = (255, 0, 20)
+MAGENTA = (0, 255, 20)
 """Magenta."""
 WHITE = (255, 255, 255)
 """White."""
 BLACK = (0, 0, 0)
 """Black or off."""
 
-GOLD = (255, 222, 30)
+#GOLD = (255, 222, 30)
+GOLD = (222, 255, 30)
 """Gold."""
-PINK = (242, 90, 255)
+#PINK = (242, 90, 255)
+PINK = (90, 242, 255)
 """Pink."""
-AQUA = (50, 255, 255)
+#AQUA = (50, 255, 255)
+AQUA = (255, 50, 255)
 """Aqua."""
-JADE = (0, 255, 40)
+#JADE = (0, 255, 40)
+JADE = (255, 0, 40)
 """Jade."""
-AMBER = (255, 100, 0)
+#AMBER = (255, 100, 0)
+AMBER = (100, 255, 0)
 """Amber."""
-OLD_LACE = (253, 245, 230)  # Warm white.
+#OLD_LACE = (253, 245, 230)  # Warm white.
+OLD_LACE = (245, 253, 230)
 """Old lace or warm white."""
 
 RGBW_WHITE_RGB = (255, 255, 255, 0)
