@@ -1,5 +1,5 @@
 # neopixel-led
-Some fade animations by exploring Adafruit Neopixel but mostly rpi-ws281x libraries in others work to apply on some of my robotic projects. I share Arduino and Python (raspberry pi) implementation of these functions. 
+Some fade/pulse animations by exploring Adafruit Neopixel but mostly rpi-ws281x libraries in others work to apply on some of my robotic projects. I share Arduino and Python (raspberry pi) implementation of these functions. 
 
 For Arduino install Adafruit Neopixel library on Arduino IDE library manager (see https://docs.arduino.cc/libraries/adafruit-neopixel/).
 
