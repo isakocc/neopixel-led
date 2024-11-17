@@ -1,4 +1,4 @@
-Python implementation for raspberry pi:
+#Python implementation for raspberry pi:
 
 The file fade-sigterm-ws281x.py uses rpi-ws281x library and make led fade in and out in white color using strip.setPixelColor function to set the color and change brightness by changing 32 bit color information in the function (from Color(255,255,255) to Color(25,25,25) and back) with a range() function (that is strip.setPixelColor(i, Color(j,j,j) where j is in a range of 25 to 255). To resolve that I used this discussion (also see this implementation in the Arduino section): https://forum.arduino.cc/t/adafruit-neopixel-code-for-simple-brightness-fade/418170/7. It clears all leds when finishing script with ctrl-c (for that you need to start the script using -c argument: fade-sigterm-ws281x.py -c) or when system shuts down (for that you need to add script to start at boot with crontab -e: @reboot sudo python /"location of file"/fade-sigterm-ws281x.py & ).
 
